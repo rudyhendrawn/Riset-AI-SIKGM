@@ -304,10 +304,10 @@ selection,view,channel,start_time,end_time,LowFreq,HighFreq,sound_category,sound
 6,Spectrogram 1,1,3196.225573,3197.377901,23.1,4469.3,elephant_sound,unidentified,1,Chris,Giot,0mCage_Swift2_20210923_080100.wav
 7,Spectrogram 1,1,3378.995793,3380.274403,8.1,4095.1,elephant_sound,unidentified,1,Chris (like sound number 4),Giot,0mCage_Swift2_20210923_080100.wav
 1,Spectrogram 1,1,1175.947628,1176.715795,0,6631.2,elephant_vocalization,trumpet,3,Chris (being disturbed by mahout),Giot,0mCage_Swift2_20210923_090100.wav
-1,Spectrogram 1,1,5.50497E+11,5.51065E+11,82600,7202400,elephant_sound,snort,3,,Giot,0mCage_Swift2_20210923_210100.wav
-2,Spectrogram 1,1,2.44404E+12,2.44502E+12,0,7796600,elephant_sound,unidentified,2,Chris,Giot,0mCage_Swift2_20210923_210100.wav
-3,Spectrogram 1,1,2.44751E+12,2.44808E+12,0,6939100,elephant_vocalization,trumpet,2,"Boni (when she run, after playing with Chris",Giot,0mCage_Swift2_20210923_210100.wav
-4,Spectrogram 1,1,3.37862E+12,3.37946E+12,0,3151900,elephant_sound,breathing,2,,Giot,0mCage_Swift2_20210923_210100.wav
+1,Spectrogram 1,1,5.50E+11,5.51E+11,82600,7202400,elephant_sound,snort,3,,Giot,0mCage_Swift2_20210923_210100.wav
+2,Spectrogram 1,1,2.44E+12,2.45E+12,0,7796600,elephant_sound,unidentified,2,Chris,Giot,0mCage_Swift2_20210923_210100.wav
+3,Spectrogram 1,1,2.45E+12,2.45E+12,0,6939100,elephant_vocalization,trumpet,2,"Boni (when she run, after playing with Chris",Giot,0mCage_Swift2_20210923_210100.wav
+4,Spectrogram 1,1,3.38E+12,3.38E+12,0,3151900,elephant_sound,breathing,2,,Giot,0mCage_Swift2_20210923_210100.wav
 1,Spectrogram 1,1,1760.106329,1761.565143,34.8,213,elephant_vocalization,rumble,2,,Giot,0mCage_Swift2_20210923_220100.wav
 1,Spectrogram 1,1,1228.255016,1229.044281,0,6626.1,elephant_vocalization,roar,2,Boni,Giot,0mCage_Swift2_20210924_000000.wav
 1,Spectrogram 1,1,1134.16624,1134.60078,0,7877,elephant_vocalization,trumpet,3,"Sari, maybe scared",Giot,0mCage_Swift2_20210924_030100.wav
@@ -369,10 +369,10 @@ selection,view,channel,start_time,end_time,LowFreq,HighFreq,sound_category,sound
 10,Spectrogram 1,1,3350.062327,3350.984126,0,8000,elephant_vocalization,trumpet,3,"Boni, run, afraid about something, play",Giot,0mCage_Swift2_20211009_070100.wav
 1,Spectrogram 1,1,519.87797,520.1905032,69.6,7599.9,elephant_vocalization,trumpet,2,Boni (scared about something atau kegelian),Giot,0mCage_Swift2_20211009_080100.wav
 2,Spectrogram 1,1,2518.284635,2519.326466,20,8000,elephant_sound,groan,2,"Berti, diputar-putar kepalanya, ada yang terasa mengganggu",Giot,0mCage_Swift2_20211009_080100.wav
-1,Spectrogram 1,1,1.71292E+12,1.71336E+12,870,41320,elephant_vocalization,trumpet,3,"Chris, when given orders by mahout, gak mau dia, marah (from far away)",Giot,0mCage_Swift2_20211009_090100.wav
-2,Spectrogram 1,1,1.71556E+12,1.71611E+12,0,40582,elephant_vocalization,trumpet,3,"Chris, same with  sound no 1",Giot,0mCage_Swift2_20211009_090100.wav
-3,Spectrogram 1,1,1.88238E+12,1.88275E+12,3913,80000,elephant_vocalization,trumpet,3,Boni,Giot,0mCage_Swift2_20211009_090100.wav
-4,Spectrogram 1,1,2.56257E+12,2.56289E+12,3935,76245,elephant_vocalization,trumpet,3,dont know which elephants (maybe Chris),Giot,0mCage_Swift2_20211009_090100.wav
+1,Spectrogram 1,1,1.71E+12,1.71E+12,870,41320,elephant_vocalization,trumpet,3,"Chris, when given orders by mahout, gak mau dia, marah (from far away)",Giot,0mCage_Swift2_20211009_090100.wav
+2,Spectrogram 1,1,1.72E+12,1.72E+12,0,40582,elephant_vocalization,trumpet,3,"Chris, same with  sound no 1",Giot,0mCage_Swift2_20211009_090100.wav
+3,Spectrogram 1,1,1.88E+12,1.88E+12,3913,80000,elephant_vocalization,trumpet,3,Boni,Giot,0mCage_Swift2_20211009_090100.wav
+4,Spectrogram 1,1,2.56E+12,2.56E+12,3935,76245,elephant_vocalization,trumpet,3,dont know which elephants (maybe Chris),Giot,0mCage_Swift2_20211009_090100.wav
 1,Spectrogram 1,1,331.1077178,338.348021,15.8,171.2,elephant_vocalization,rumble,3,Agustin,Giot,Angon14_Eloc_20211102_100000.wav
 2,Spectrogram 1,1,848.0453772,848.7131599,242.9,3639.6,elephant_vocalization,trumpet,3,"Sari, mengecek apakah itu temannya atau bukan",Giot,Angon14_Eloc_20211102_100000.wav
 3,Spectrogram 1,1,320.3037628,327.560335,17.391,164.13,elephant_vocalization,rumble,3,Agustin,Giot,Angon14_Eloc_20211102_100000.wav
@@ -1608,19 +1608,19 @@ selection,view,channel,start_time,end_time,LowFreq,HighFreq,sound_category,sound
 26,Spectrogram 1,1,1671.97875,1674.693535,19.022,135.326,elephant_vocalization,rumble,3,Agustin,Giot,Moving_Eloc5_20211117_164319.wav
 27,Spectrogram 1,1,725.2357379,729.276348,25.543,110.87,elephant_vocalization,rumble,3,Chris,Giot,Moving_Eloc5_20211117_164319.wav
 28,Spectrogram 1,1,667.7201784,673.1497483,22.283,189.674,elephant_vocalization,rumble,3,,Giot,Moving_Eloc5_20211117_164319.wav
-1,Spectrogram 1,1,9.78884E+11,9.8414E+11,16000,147800,elephant_vocalization,rumble,3,maybe Yuni,Giot,Moving_Eloc_20210922_153439.wav
-2,Spectrogram 1,1,9.85156E+11,9.88225E+11,13600,142900,elephant_vocalization,rumble,3,maybe Yuni,Giot,Moving_Eloc_20210922_153439.wav
-3,Spectrogram 1,1,1.47051E+12,1.47146E+12,25364,382609,elephant_vocalization,rumble,3,Berti,Giot,Moving_Eloc_20210922_153439.wav
-4,Spectrogram 1,1,1.71967E+12,1.72333E+12,15400,134900,elephant_vocalization,rumble,3,Sari,Giot,Moving_Eloc_20210922_153439.wav
-5,Spectrogram 1,1,1.72607E+12,1.73088E+12,15500,97300,elephant_vocalization,rumble,3,Sari,Giot,Moving_Eloc_20210922_153439.wav
-6,Spectrogram 1,1,1.74774E+12,1.75188E+12,17100,89400,elephant_vocalization,rumble,3,Sari,Giot,Moving_Eloc_20210922_153439.wav
-7,Spectrogram 1,1,1.76017E+12,1.7643E+12,13000,172800,elephant_vocalization,rumble,3,Sari or another elephant,Giot,Moving_Eloc_20210922_153439.wav
-8,Spectrogram 1,1,1.77159E+12,1.77712E+12,13100,150600,elephant_vocalization,rumble,3,Sari or another elephant,Giot,Moving_Eloc_20210922_153439.wav
-9,Spectrogram 1,1,1.89225E+12,1.89448E+12,12300,129100,elephant_vocalization,rumble,3,Sari or another elephant,Giot,Moving_Eloc_20210922_153439.wav
-12,Spectrogram 1,1,2.88834E+12,2.89185E+12,21200,117400,elephant_vocalization,rumble,3,Agustin,Giot,Moving_Eloc_20210922_153439.wav
-10,Spectrogram 1,1,2.87678E+12,2.87722E+12,0,8000000,elephant_vocalization,trumpet,3,"Agustin (mahout jalan di bawahnya, lalu dia pipis kegelian",Giot,Moving_Eloc_20210922_153439.wav
-11,Spectrogram 1,1,2.88445E+12,2.88517E+12,0,8000000,elephant_vocalization,trumpet,3,Agustin,Giot,Moving_Eloc_20210922_153439.wav
-13,Spectrogram 1,1,2.89665E+12,2.89736E+12,0,8000000,elephant_vocalization,trumpet,3,Agustin,Giot,Moving_Eloc_20210922_153439.wav
+1,Spectrogram 1,1,9.79E+11,9.84E+11,16000,147800,elephant_vocalization,rumble,3,maybe Yuni,Giot,Moving_Eloc_20210922_153439.wav
+2,Spectrogram 1,1,9.85E+11,9.88E+11,13600,142900,elephant_vocalization,rumble,3,maybe Yuni,Giot,Moving_Eloc_20210922_153439.wav
+3,Spectrogram 1,1,1.47E+12,1.47E+12,25364,382609,elephant_vocalization,rumble,3,Berti,Giot,Moving_Eloc_20210922_153439.wav
+4,Spectrogram 1,1,1.72E+12,1.72E+12,15400,134900,elephant_vocalization,rumble,3,Sari,Giot,Moving_Eloc_20210922_153439.wav
+5,Spectrogram 1,1,1.73E+12,1.73E+12,15500,97300,elephant_vocalization,rumble,3,Sari,Giot,Moving_Eloc_20210922_153439.wav
+6,Spectrogram 1,1,1.75E+12,1.75E+12,17100,89400,elephant_vocalization,rumble,3,Sari,Giot,Moving_Eloc_20210922_153439.wav
+7,Spectrogram 1,1,1.76E+12,1.76E+12,13000,172800,elephant_vocalization,rumble,3,Sari or another elephant,Giot,Moving_Eloc_20210922_153439.wav
+8,Spectrogram 1,1,1.77E+12,1.78E+12,13100,150600,elephant_vocalization,rumble,3,Sari or another elephant,Giot,Moving_Eloc_20210922_153439.wav
+9,Spectrogram 1,1,1.89E+12,1.89E+12,12300,129100,elephant_vocalization,rumble,3,Sari or another elephant,Giot,Moving_Eloc_20210922_153439.wav
+12,Spectrogram 1,1,2.89E+12,2.89E+12,21200,117400,elephant_vocalization,rumble,3,Agustin,Giot,Moving_Eloc_20210922_153439.wav
+10,Spectrogram 1,1,2.88E+12,2.88E+12,0,8000000,elephant_vocalization,trumpet,3,"Agustin (mahout jalan di bawahnya, lalu dia pipis kegelian",Giot,Moving_Eloc_20210922_153439.wav
+11,Spectrogram 1,1,2.88E+12,2.89E+12,0,8000000,elephant_vocalization,trumpet,3,Agustin,Giot,Moving_Eloc_20210922_153439.wav
+13,Spectrogram 1,1,2.90E+12,2.90E+12,0,8000000,elephant_vocalization,trumpet,3,Agustin,Giot,Moving_Eloc_20210922_153439.wav
 1,Spectrogram 1,1,0.331456298,4.24579734,20.1,162.5,elephant_vocalization,rumble,3,maybe berti,Giot,Moving_Eloc_20210923_104101.wav
 2,Spectrogram 1,1,11.1116778,13.81067908,17.4,140.2,elephant_vocalization,rumble,3,maybe Berti,Giot,Moving_Eloc_20210923_104101.wav
 3,Spectrogram 1,1,17.91442372,22.58637916,21.2,132.1,elephant_vocalization,rumble,3,maybe Berti,Giot,Moving_Eloc_20210923_104101.wav
@@ -1751,8 +1751,8 @@ selection,view,channel,start_time,end_time,LowFreq,HighFreq,sound_category,sound
 3,Spectrogram 1,1,465.7352232,465.9361374,1327.9,8000,elephant_sound,unidentified,3,suara menyusui Carlos,Giot,Olivedananaknya_Swift2_20211117_170100.wav
 4,Spectrogram 1,1,2881.922521,2882.32435,0,4542.5,elephant_vocalization,trumpet,1,unknown,Giot,Olivedananaknya_Swift2_20211117_170100.wav
 1,Spectrogram 1,1,840.2422916,841.6688862,364.4,8000,elephant_vocalization,trumpet,3,unidentified (maybe Sari),Giot,Olivedananaknya_Swift2_20211117_180100.wav
-1,Spectrogram 1,1,2.28934E+12,2.29684E+12,258,1940,elephant_vocalization,growl,1,unknown,Giot,Olivedananaknya_Swift2_20211117_190100.wav
-2,Spectrogram 1,1,2.31348E+12,2.31451E+12,558,28178,elephant_vocalization,trumpet,2,Olive,Giot,Olivedananaknya_Swift2_20211117_190100.wav
+1,Spectrogram 1,1,2.29E+12,2.30E+12,258,1940,elephant_vocalization,growl,1,unknown,Giot,Olivedananaknya_Swift2_20211117_190100.wav
+2,Spectrogram 1,1,2.31E+12,2.31E+12,558,28178,elephant_vocalization,trumpet,2,Olive,Giot,Olivedananaknya_Swift2_20211117_190100.wav
 1,Spectrogram 1,1,1965.452348,1973.002326,17.6,156.6,elephant_vocalization,growl,3,unknown,Giot,Olivedananaknya_Swift2_20211117_200100.wav
 2,Spectrogram 1,1,1978.445333,1984.415083,21.3,147,elephant_vocalization,growl,3,unknown,Giot,Olivedananaknya_Swift2_20211117_200100.wav
 3,Spectrogram 1,1,1985.644149,1994.949936,18.4,166.1,elephant_vocalization,growl,3,unknown,Giot,Olivedananaknya_Swift2_20211117_200100.wav

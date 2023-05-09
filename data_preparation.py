@@ -1,4 +1,5 @@
 import os
+import time
 import torch
 import librosa
 import torchaudio
@@ -7,7 +8,7 @@ import soundfile as sf
 
 SOURCE_DIR = '/Users/rudyh/Documents/Python/datasets/Bio-Akustik-Gajah'
 DEST_DIR = '/Users/rudyh/Documents/Python/datasets/Bio-Akustik-Gajah/segmented-audio-data'
-METADATA_FILE = 'codes/Riset-AI-SIKGM/metadata.csv'
+METADATA_FILE = '/Users/rudyh/Documents/Python/pytorch/codes/Riset-AI-SIKGM/metadata.csv'
 
 def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir=SOURCE_DIR, output_audio_dir=DEST_DIR):
 	"""
@@ -23,6 +24,7 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 	"""
 	metadata_df = pd.read_csv(metadata_file)
 	output_metadata = []
+	class_counts = {}
 
 	for index, row in metadata_df.iterrows():
 		# Extract metadata
@@ -32,8 +34,12 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 		filename = row['filename']
 
 		# Load the audio file
-		audio_file_path = os.path.join(input_audio_dir, filename)
-		audio_data, sample_rate = librosa.load(audio_file_path)
+		try:
+			audio_file_path = os.path.join(input_audio_dir, filename)
+			audio_data, sample_rate = librosa.load(audio_file_path)
+		except Exception as e:
+			print(f'Error while loading {audio_file_path}: {e}')
+			continue
 
 		# Convert start and end times to sample indices
 		start_sample = librosa.time_to_samples(start_time, sr=sample_rate)
@@ -43,11 +49,24 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 		audio_segment = audio_data[start_sample:end_sample]
 
 		# Create output filename and path
-		output_filename = f'{class_name}_{index}.wav'
+		# The index value is sequential relative to the class, e.g. growl_0.wav, growl_1.wav, rumble_0.wav, rumble_1.wav, etc.
+		if class_name not in class_counts:
+			class_counts[class_name] = 0
+
+		output_filename = f'{class_name}_{class_counts[class_name]}.wav'
 		output_file_path = os.path.join(output_audio_dir, output_filename)
+		# output_filename = f'{class_name}_{index}.wav'
+		# output_file_path = os.path.join(output_audio_dir, output_filename)
 
 		# Save the audio segment as WAV File
-		sf.write(output_file_path, audio_segment, sample_rate)
+		# Use safer mechanism to save the audio segment
+		try:
+			sf.write(output_file_path, audio_segment, sample_rate)
+			print(f'Saved {output_filename} to {DEST_DIR} successfully')
+		except Exception as e:
+			print(f'Error while saving {output_filename}: {e}')
+		
+		class_counts[class_name] += 1
 
 		# Add the metadata to the list
 		output_metadata.append({
@@ -60,7 +79,7 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 	output_metadata = pd.DataFrame(output_metadata)
 	return output_metadata
 
-def create_new_metadata(df=metadata_df, audio_dir=DEST_DIR):
+def create_new_metadata(df, audio_dir):
 	"""
 	Create new metadata dataframe based on the output audio segments.
 
@@ -87,3 +106,27 @@ def create_new_metadata(df=metadata_df, audio_dir=DEST_DIR):
 	)
 
 	return df
+
+def main():
+	# Process and save audio segments
+	print('Processing and saving audio segments...')
+	
+	# Create timer in seconds
+	start_time = time.time()
+	output_metadata = process_and_save_audio_segments()
+	end_time = time.time()
+	print(f'Elapsed time: {end_time - start_time} seconds')
+	
+	# Create new metadata
+	new_metadata = create_new_metadata(df=output_metadata, audio_dir=DEST_DIR)
+
+	# Save the new metadata
+	new_metadata.to_csv(os.path.join(DEST_DIR, 'new_metadata.csv'), index=False)
+
+if __name__ == '__main__':
+	"""
+	Missing files:
+	- Olivedananaknya_Swift2_20211122_150000.wav
+	- Olivedananaknya_Swift2_20211122_160000.wav
+	"""
+	main()
