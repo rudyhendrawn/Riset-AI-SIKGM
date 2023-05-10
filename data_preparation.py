@@ -6,12 +6,12 @@ import torchaudio
 import pandas as pd
 import soundfile as sf					# Use this audio backend for Windows
 
-torchaudio.set_audio_backend('sox_io')	# Use this audio backend for MacOS
+# torchaudio.set_audio_backend('sox_io')	# Use this audio backend for MacOS
 
-
-SOURCE_DIR = '/Users/rudyhendrawan/miniforge3/datasets/Bio-Akustik-Gajah'
-DEST_DIR = '/Users/rudyhendrawan/miniforge3/datasets/Bio-Akustik-Gajah/segmented_audio_data'
-METADATA_FILE = '/Users/rudyhendrawan/miniforge3/envs/pytorch/codes/Riset-AI-SIKGM/metadata.csv'
+ROOT_DIR = '/Users/rudyh/Documents/Python'
+SOURCE_DIR = os.path.join(ROOT_DIR, 'datasets/Bio-Akustik-Gajah/')
+DEST_DIR = os.path.join(ROOT_DIR, 'datasets/Bio-Akustik-Gajah/segmented_audio_data/')
+METADATA_FILE = os.path.join(ROOT_DIR, 'pytorch/codes/Riset-AI-SIKGM/metadata.csv')
 
 def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir=SOURCE_DIR, output_audio_dir=DEST_DIR):
 	"""
@@ -39,8 +39,8 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 		# Load the audio file
 		try:
 			audio_file_path = os.path.join(input_audio_dir, filename)
-			# audio_data, sample_rate = librosa.load(audio_file_path)
-			audio_data, sample_rate = torchaudio.load(audio_file_path)
+			audio_data, sample_rate = librosa.load(audio_file_path)
+			# audio_data, sample_rate = torchaudio.load(audio_file_path)
 		except Exception as e:
 			print(f'Error while loading {audio_file_path}: {e}')
 			continue
@@ -65,9 +65,9 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 
 		# Save the audio segment as WAV File
 		try:
-			# sf.write(output_file_path, audio_segment, sample_rate)	# Windows
+			sf.write(output_file_path, audio_segment, sample_rate)	# Windows
 			# Use sox_io backend to save the audio segment in MacOS 
-			torchaudio.save(output_file_path, audio_segment, sample_rate, format='wav')
+			# torchaudio.save(output_file_path, audio_segment, sample_rate, format='wav')
 			print(f'Saved {output_filename} to {output_audio_dir} successfully')
 		except Exception as e:
 			print(f'Error while saving {output_filename}: {e}')
@@ -130,9 +130,4 @@ def main():
 	new_metadata.to_csv(os.path.join(DEST_DIR, 'new_metadata.csv'), index=False)
 
 if __name__ == '__main__':
-	"""
-	Missing files:
-	- Olivedananaknya_Swift2_20211122_150000.wav
-	- Olivedananaknya_Swift2_20211122_160000.wav
-	"""
 	main()
