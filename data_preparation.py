@@ -4,11 +4,14 @@ import torch
 import librosa
 import torchaudio
 import pandas as pd
-import soundfile as sf
+import soundfile as sf					# Use this audio backend for Windows
 
-SOURCE_DIR = '/Users/rudyh/Documents/Python/datasets/Bio-Akustik-Gajah'
-DEST_DIR = '/Users/rudyh/Documents/Python/datasets/Bio-Akustik-Gajah/segmented-audio-data'
-METADATA_FILE = '/Users/rudyh/Documents/Python/pytorch/codes/Riset-AI-SIKGM/metadata.csv'
+torchaudio.set_audio_backend('sox_io')	# Use this audio backend for MacOS
+
+
+SOURCE_DIR = '/Users/rudyhendrawan/miniforge3/datasets/Bio-Akustik-Gajah'
+DEST_DIR = '/Users/rudyhendrawan/miniforge3/datasets/Bio-Akustik-Gajah/segmented_audio_data'
+METADATA_FILE = '/Users/rudyhendrawan/miniforge3/envs/pytorch/codes/Riset-AI-SIKGM/metadata.csv'
 
 def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir=SOURCE_DIR, output_audio_dir=DEST_DIR):
 	"""
@@ -36,7 +39,8 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 		# Load the audio file
 		try:
 			audio_file_path = os.path.join(input_audio_dir, filename)
-			audio_data, sample_rate = librosa.load(audio_file_path)
+			# audio_data, sample_rate = librosa.load(audio_file_path)
+			audio_data, sample_rate = torchaudio.load(audio_file_path)
 		except Exception as e:
 			print(f'Error while loading {audio_file_path}: {e}')
 			continue
@@ -47,7 +51,8 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 
 		# Extract the audio segment
 		audio_segment = audio_data[start_sample:end_sample]
-
+		# audio_segment = torch.tensor(audio_segment)
+		
 		# Create output filename and path
 		# The index value is sequential relative to the class, e.g. growl_0.wav, growl_1.wav, rumble_0.wav, rumble_1.wav, etc.
 		if class_name not in class_counts:
@@ -59,13 +64,14 @@ def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir
 		# output_file_path = os.path.join(output_audio_dir, output_filename)
 
 		# Save the audio segment as WAV File
-		# Use safer mechanism to save the audio segment
 		try:
-			sf.write(output_file_path, audio_segment, sample_rate)
-			print(f'Saved {output_filename} to {DEST_DIR} successfully')
+			# sf.write(output_file_path, audio_segment, sample_rate)	# Windows
+			# Use sox_io backend to save the audio segment in MacOS 
+			torchaudio.save(output_file_path, audio_segment, sample_rate, format='wav')
+			print(f'Saved {output_filename} to {output_audio_dir} successfully')
 		except Exception as e:
 			print(f'Error while saving {output_filename}: {e}')
-		
+
 		class_counts[class_name] += 1
 
 		# Add the metadata to the list
