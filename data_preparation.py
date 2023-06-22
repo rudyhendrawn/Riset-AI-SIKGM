@@ -10,7 +10,7 @@ import soundfile as sf					# Use this audio backend for Windows
 
 ROOT_DIR = '/Users/rudyh/Documents/Python'
 SOURCE_DIR = os.path.join(ROOT_DIR, 'datasets/Bio-Akustik-Gajah/')
-DEST_DIR = os.path.join(ROOT_DIR, 'datasets/Bio-Akustik-Gajah/segmented_audio_data/')
+DEST_DIR = os.path.join(ROOT_DIR, 'datasets/Bio-Akustik-Gajah/segmented_audio_data_v2/')
 METADATA_FILE = os.path.join(ROOT_DIR, 'pytorch/codes/Riset-AI-SIKGM/metadata.csv')
 
 def process_and_save_audio_segments(metadata_file=METADATA_FILE, input_audio_dir=SOURCE_DIR, output_audio_dir=DEST_DIR):
